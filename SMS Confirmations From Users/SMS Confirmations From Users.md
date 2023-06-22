@@ -13,3 +13,7 @@ which are stored in the 'fb_sms_sends' table. These message types should not be 
 
 **Calculate the percentage of confirmed SMS texts for August 4, 2020. 
 Be aware that there are multiple message types, the ones you're interested in are messages with type equal to 'message'.**
+
+
+
+## Question Link - https://platform.stratascratch.com/coding/10291-sms-confirmations-from-users
