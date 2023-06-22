@@ -17,3 +17,5 @@ Be aware that there are multiple message types, the ones you're interested in ar
 
 
 ## Question Link - https://platform.stratascratch.com/coding/10291-sms-confirmations-from-users
+
+![Screenshot 2023-06-23 002330](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/d8b03483-f0bf-47df-b74c-487a3bf49c11)
