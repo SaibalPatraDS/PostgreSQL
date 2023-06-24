@@ -5,14 +5,20 @@ calculate the total time that each post was viewed by users. Output post ID and 
 
 ## user_sessions
 session_id:                   int
+
 user_id:                      varchar
+
 session_starttime:            datetime
+
 session_endtime:              datetime
+
 platform:                     varchar
 
 ## post_viewers
 session_id:                   int
+
 post_id:                      int
+
 perc_viewed:                  float
 
 
