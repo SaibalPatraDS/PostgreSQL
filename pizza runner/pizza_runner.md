@@ -25,3 +25,10 @@ This case study has LOTS of questions - they are broken up by area of focus incl
    * Runner and Customer Experience
    * Ingredient Optimisation
    * Pricing and Ratings
+
+
+
+## A. Pizza Metrics
+
+### 1. How many pizzas were ordered?
+
