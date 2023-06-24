@@ -16,3 +16,12 @@ All datasets exist within the pizza_runner database schema - be sure to include 
 
 ## Entity Relationship Diagram(ERD)
 ![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/b34b9468-c07f-4fd4-a6e9-57512a4eb68e)
+
+
+## Case Study Questions
+This case study has LOTS of questions - they are broken up by area of focus including:
+
+   * Pizza Metrics
+   * Runner and Customer Experience
+   * Ingredient Optimisation
+   * Pricing and Ratings
