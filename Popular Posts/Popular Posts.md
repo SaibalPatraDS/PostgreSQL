@@ -22,4 +22,6 @@ post_id:                      int
 perc_viewed:                  float
 
 
-# Question Link - https://platform.stratascratch.com/coding/2073-popular-posts
+## Question Link - https://platform.stratascratch.com/coding/2073-popular-posts
+
+## Solution - https://www.youtube.com/watch?v=Q-3wvYInCeI&list=PLv6MQO1Zzdmq5w4YkdkWyW8AaWatSQ0kX&index=7
