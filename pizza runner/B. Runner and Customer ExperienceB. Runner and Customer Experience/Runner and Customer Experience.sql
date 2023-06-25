@@ -151,28 +151,3 @@ SELECT runner_id,
 FROM pizza_runner.runner_orders
 GROUP BY runner_id
 ORDER BY runner_id;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
