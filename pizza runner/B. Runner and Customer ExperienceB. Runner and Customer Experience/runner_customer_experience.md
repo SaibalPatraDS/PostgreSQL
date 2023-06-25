@@ -43,4 +43,4 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 ### 7. What is the successful delivery percentage for each runner?
 
 
-Link to [A. Pizza Metrics]([pizza runner/A. Pizza Metrics](https://github.com/SaibalPatraDS/PostgreSQL/tree/ca40cc7a5f5cc80072ea2ac02ef32890e5e951a3/pizza%20runner/A.%20Pizza%20Metrics)
+Link to [A. Pizza Metrics](https://github.com/SaibalPatraDS/PostgreSQL/tree/ca40cc7a5f5cc80072ea2ac02ef32890e5e951a3/pizza%20runner/A.%20Pizza%20Metrics)
