@@ -45,3 +45,5 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 ### 9. How many pizzas were delivered that had both exclusions and extras?
 ### 10. What was the total volume of pizzas ordered for each hour of the day?
 ### 11. What was the volume of orders for each day of the week?
+
+Link to [B. Runner and Customer Experience](https://github.com/SaibalPatraDS/PostgreSQL/tree/30e50a69961b835a7ef6080887b5bdc88e1e9e28/pizza%20runner/B.%20Runner%20and%20Customer%20ExperienceB.%20Runner%20and%20Customer%20Experience)
