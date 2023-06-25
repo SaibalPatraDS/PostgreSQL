@@ -41,3 +41,6 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 ### 5. What was the difference between the longest and shortest delivery times for all orders?
 ### 6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
 ### 7. What is the successful delivery percentage for each runner?
+
+
+Link to (A. Pizza Metrics)[pizza runner/A. Pizza Metrics] 
