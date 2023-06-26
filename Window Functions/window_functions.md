@@ -8,9 +8,13 @@
 
 #### syntax - 
 
-ROW_NUMBER(column_name) OVER(partition by column_name ORDER BY column_name) AS rn;
+        ROW_NUMBER() OVER(partition by column_name ORDER BY column_name`) AS rn;
 
-### 2. RANK() - 
+### 2. RANK() -  Assigns the same number to identical values and skipping over the next number in such cases. 
+
+#### syntax - 
+
+        RANK()  OVER(PARTITION BY column_name ORDER BY column_name`) AS rnk;
 
 
 
