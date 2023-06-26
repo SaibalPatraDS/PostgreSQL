@@ -43,4 +43,4 @@ Here, column_name indicating the column on which you want to apply `LEAD()` func
 Here, column_name indicating the column on which you want to apply `LAG()` function, and `n` is the number of rows to take into consideration for `LAG()` function and `#num` is any arbitary number set by user in replacement of `NULL` values.
 
 
-For better understanding run the [file 1](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/create_table_employee.sql), [file 2](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/window_function.sql)
+For better understanding run the [file 1](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/create_table_employee.sql), [file 2](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/window_function.sql) and one can go through the tutorial, [video](https://youtu.be/Ww71knvhQ-s)
