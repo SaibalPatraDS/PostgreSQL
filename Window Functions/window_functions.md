@@ -44,3 +44,16 @@ Here, column_name indicating the column on which you want to apply `LAG()` funct
 
 
 For better understanding run the [file 1](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/create_table_employee.sql), [file 2](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/window_function.sql) and one can go through the tutorial, [video](https://youtu.be/Ww71knvhQ-s)
+
+
+### 6. FIRST_VALUE() - The first_value() function in PostgreSQL returns the first value in an ordered set.
+
+#### syntax - 
+
+          FIRST_VALUE(expression) OVER(PARTITION BY partition_column ORDER BY sort_column) AS first_value
+
+  * expression: The value to be evaluated.
+  * PARTITION BY: Optional clause that divides the result set into partitions.
+  * ORDER BY: Specifies the order in which the values are sorted.
+  * window_frame_clause: Optional clause that defines the window frame within the partition.
+
