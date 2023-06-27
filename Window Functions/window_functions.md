@@ -50,7 +50,7 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
 
 #### syntax - 
 
-          FIRST_VALUE(expression) OVER(PARTITION BY partition_column ORDER BY sort_column) AS first_value
+          FIRST_VALUE(expression) OVER(PARTITION BY partition_column ORDER BY sort_column DESC) AS first_value
 
   * expression: The value to be evaluated.
   * PARTITION BY: Optional clause that divides the result set into partitions.
@@ -63,7 +63,7 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
 
           LAST_VALUE(expression) 
           OVER(PARTITION BY partition_column 
-               ORDER BY sort_column
+               ORDER BY sort_column DESC
                RANGE BETWEEN UNBOUNDED PREDEDING AND UNBOUNDED FOLLOWING) AS last_value
 
   * expression: The value to be evaluated.
@@ -72,3 +72,12 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
   * window_frame_clause: Optional clause that defines the window frame within the partition.
   * Range between unbounded preceding and current row means the during searching, 
     the search will be done between prior rows and current rows
+
+### 7. NTH_VALUE() - The NTH_VALUE() function will return the nth(2nd, 3rd, or any) value in an ordered set. 
+
+#### syntax - 
+
+           NTH_VALUE(#num)
+           OVER(PARTITION BY partition_column
+                   ORDER BY sort_column DESC
+                   RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS nth_value
