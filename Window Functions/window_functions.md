@@ -81,3 +81,17 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
            OVER(PARTITION BY partition_column
                    ORDER BY sort_column DESC
                    RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS nth_value
+
+
+### 8. NTILE() - The ntile function divides the rows into a specified number of buckets, assigning a bucket number to each row. The number of buckets determines the granularity of the division.
+
+
+#### synatx - 
+
+          NTILE(bucket_count) OVER (PARTITION BY partition_expression ORDER BY sort_expression)
+
+   * bucket_count: The number of buckets to divide the rows into.
+   * partition_expression (optional): Specifies the column(s) used to partition the data into separate groups. If omitted, the entire result set is treated as a single partition.
+   * sort_expression: Specifies the column(s) used for ordering the rows within each partition.
+
+                   
