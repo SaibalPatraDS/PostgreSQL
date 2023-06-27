@@ -94,4 +94,12 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
    * partition_expression (optional): Specifies the column(s) used to partition the data into separate groups. If omitted, the entire result set is treated as a single partition.
    * sort_expression: Specifies the column(s) used for ordering the rows within each partition.
 
-                   
+
+### 9. PERCENT_RANK() - The `percent_rank` function calculates the relative rank of each row within a result set as a value between 0 and 1. It provides the percentile ranking of each row compared to the other rows in the result set.
+
+#### syntax - 
+
+            PERCENT_RANK() OVER (PARTITION BY partition_expression ORDER BY sort_expression)
+
+  * partition_expression (optional): Specifies the column(s) used to partition the data into separate groups. If omitted, the entire result set is treated as a single partition.
+  * sort_expression: Specifies the column(s) used for ordering the rows within each partition.
