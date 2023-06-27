@@ -77,7 +77,7 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
 
 #### syntax - 
 
-           NTH_VALUE(#num)
+           NTH_VALUE(column_name, #num)
            OVER(PARTITION BY partition_column
                    ORDER BY sort_column DESC
                    RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS nth_value
