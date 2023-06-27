@@ -57,3 +57,17 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
   * ORDER BY: Specifies the order in which the values are sorted.
   * window_frame_clause: Optional clause that defines the window frame within the partition.
 
+### 6. LAST_VALUE() - The last_value() function in PostgreSQL returns the last value in an ordered set.
+
+#### syntax - 
+
+          LAST_VALUE(expression) 
+          OVER(PARTITION BY partition_column 
+               ORDER BY sort_column
+               RANGE BETWEEN UNBOUNDED PREDEDING AND UNBOUNDED FOLLOWING) AS last_value
+
+  * expression: The value to be evaluated.
+  * PARTITION BY: Optional clause that divides the result set into partitions.
+  * ORDER BY: Specifies the order in which the values are sorted.
+  * window_frame_clause: Optional clause that defines the window frame within the partition.
+
