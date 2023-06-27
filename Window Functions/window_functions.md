@@ -70,4 +70,5 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
   * PARTITION BY: Optional clause that divides the result set into partitions.
   * ORDER BY: Specifies the order in which the values are sorted.
   * window_frame_clause: Optional clause that defines the window frame within the partition.
-
+  * Range between unbounded preceding and current row means the during searching, 
+    the search will be done between prior rows and current rows
