@@ -46,7 +46,7 @@ Here, column_name indicating the column on which you want to apply `LAG()` funct
 For better understanding run the [file 1](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/create_table_employee.sql), [file 2](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/window_function.sql) and one can go through the tutorial, [video](https://youtu.be/Ww71knvhQ-s)
 
 
-### 6. FIRST_VALUE() - The first_value() function in PostgreSQL returns the first value in an ordered set.
+### 6. FIRST_VALUE() - The `first_value()` function in PostgreSQL returns the first value in an ordered set.
 
 #### syntax - 
 
@@ -57,7 +57,7 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
   * ORDER BY: Specifies the order in which the values are sorted.
   * window_frame_clause: Optional clause that defines the window frame within the partition.
 
-### 6. LAST_VALUE() - The last_value() function in PostgreSQL returns the last value in an ordered set.
+### 6. LAST_VALUE() - The `last_value()` function in PostgreSQL returns the last value in an ordered set.
 
 #### syntax - 
 
@@ -73,7 +73,7 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
   * Range between unbounded preceding and current row means the during searching, 
     the search will be done between prior rows and current rows
 
-### 7. NTH_VALUE() - The NTH_VALUE() function will return the nth(2nd, 3rd, or any) value in an ordered set. 
+### 7. NTH_VALUE() - The `NTH_VALUE()` function will return the nth(2nd, 3rd, or any) value in an ordered set. 
 
 #### syntax - 
 
