@@ -39,22 +39,6 @@ INSERT INTO public.product VALUES
 ('Smartwatch', 'OnePlus', 'OnePlus Watch', 220);
 COMMIT;
 
-
-
-
+-- check the table
 SELECT * FROM public.product;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
