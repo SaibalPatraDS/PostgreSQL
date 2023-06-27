@@ -103,3 +103,5 @@ For better understanding run the [file 1](https://github.com/SaibalPatraDS/Postg
 
   * partition_expression (optional): Specifies the column(s) used to partition the data into separate groups. If omitted, the entire result set is treated as a single partition.
   * sort_expression: Specifies the column(s) used for ordering the rows within each partition.
+
+For better understanding run the [product table.sql](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/window_function_2/product_table.sql), [window function 2.sql](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Window%20Functions/window_function_2/window_function_2.sql) and watch the [video](https://youtu.be/zAmJPdZu8Rg)
