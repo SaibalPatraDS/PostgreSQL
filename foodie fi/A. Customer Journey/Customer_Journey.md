@@ -4,6 +4,8 @@
 
 ### Try to keep it as short as possible - you may also want to run some sort of join to make your explanations a bit easier!
 
+![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/a1fd77a5-7212-4491-a466-202f28ba829d)
+
 
 ## Conclusion - 
 
