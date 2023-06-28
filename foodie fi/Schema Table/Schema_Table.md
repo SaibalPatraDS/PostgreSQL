@@ -1,5 +1,8 @@
 ## Table 1: plans
 
+![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/4b3c3ccd-6d57-4363-95cb-5fb401022b34)
+
+
 **Customers can choose which plans to join Foodie-Fi when they first sign up.**
 
      1. Basic plan customers have limited access and can only stream their videos and is only available monthly at $9.90
@@ -12,6 +15,9 @@
 
 
 ## Table 2 : subscriptions
+
+![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/f3cc0065-bc47-4bc4-ad63-e6dc3f5b7aa2)
+
 
 **Customer subscriptions show the exact date where their specific plan_id starts.**
 
