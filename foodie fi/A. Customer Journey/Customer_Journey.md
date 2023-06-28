@@ -9,4 +9,6 @@
 
 ## Conclusion - 
 
-On basic observation, one can observe that there is a trend to convert the trial subscriptions to annual/monthly subscriptions. Though there is rarely any `churn` customers in the piece of data but the whole data should contain `churn` customers. 
+On basic observation, one can observe that there is a trend to convert the trial subscriptions to annual/monthly subscriptions. 
+
+Though there is rarely any `churn` customers in the piece of data but the whole data should contain `churn` customers. 
