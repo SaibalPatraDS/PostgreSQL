@@ -1,4 +1,4 @@
-# CASE STUDY -3 : foodie-fi
+# [CASE STUDY -3 : foodie-fi](https://8weeksqlchallenge.com/case-study-3/)
 
 ## Introduction
 Subscription based businesses are super popular and Danny realised that there was a large gap in the market - he wanted to create a new streaming service that only had food related content - something like Netflix but with only cooking shows!
@@ -17,3 +17,6 @@ All datasets exist within the foodie_fi database schema - be sure to include thi
 ## Entity Relationship Diagram 
 
 ![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/9b40cf84-7a3d-4024-a493-cf3a15a97f83)
+
+
+Link to CASE STUDY - https://8weeksqlchallenge.com/case-study-3/
