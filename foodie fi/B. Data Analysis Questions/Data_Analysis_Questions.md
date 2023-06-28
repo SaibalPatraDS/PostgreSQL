@@ -15,4 +15,4 @@
 ### 11. How many customers downgraded from a pro monthly to a basic monthly plan in 2020?****
 
 
-Link to [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/foodie%20fi/B.%20Data%20Analysis%20Questions/B.%20Data%20Analysis%20Questions.sql)
+**Link to [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/foodie%20fi/B.%20Data%20Analysis%20Questions/B.%20Data%20Analysis%20Questions.sql)**
