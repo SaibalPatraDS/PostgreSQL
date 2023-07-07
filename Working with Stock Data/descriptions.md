@@ -12,5 +12,5 @@ The `meta` table represents financial market data with daily information about s
 
 The table is designed to store daily stock market data, allowing for analysis and insights into price movements, trading volumes, and more. The primary key constraint on the `Date` column ensures uniqueness and easy retrieval of data for specific dates.
 
-Note: The data types chosen for the columns (`NUMERIC` and `INTEGER`) are suitable for representing decimal numbers with high precision and whole numbers, respectively. These data types provide flexibility for handling financial data accurately.
+**Note**: The data types chosen for the columns (`NUMERIC` and `INTEGER`) are suitable for representing decimal numbers with high precision and whole numbers, respectively. These data types provide flexibility for handling financial data accurately.
 
