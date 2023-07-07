@@ -1,0 +1,19 @@
+/* Questions */
+
+1. Find the total volume traded on each date.
+2. Calculate the average closing price for each month.
+3. Retrieve the date with the highest opening price.
+4. Determine the number of days where the closing price was higher than the opening price.
+5. Find the date with the largest difference between the highest and lowest price.
+6. Calculate the average volume traded on days where the closing price was above the opening price.
+7. Retrieve the dates where the opening price was greater than the closing price for at least five consecutive days.
+8. Determine the top 5 dates with the highest trading volume.
+9. Calculate the percentage change in the closing price from the previous day for each date.
+10. Retrieve the dates where the closing price had a positive percentage change for three consecutive days.
+Advanced Concepts:
+
+11. Calculate the 7-day moving average of the closing price for each date.
+12. Determine the date with the highest trading volume in the month of January.
+13. Retrieve the dates where the closing price is within 10% of the highest price.
+14. Calculate the exponential moving average (EMA) of the closing price using a period of 14 days.
+15. Retrieve the dates where the closing price is higher than the EMA.
