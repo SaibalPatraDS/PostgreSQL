@@ -1,0 +1,85 @@
+-- Create Table - chicage_areas
+CREATE TABLE crime_data.chicago_areas(
+   community_area_id INTEGER  NOT NULL PRIMARY KEY 
+  ,name              VARCHAR(22) NOT NULL
+  ,population        INTEGER  NOT NULL
+  ,area_sq_mi        NUMERIC(5,2) NOT NULL
+  ,density           NUMERIC(8,2) NOT NULL
+);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (1,'rogers park',55628,1.84,30232.61);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (2,'west ridge',77122,3.53,21847.59);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (3,'uptown',57182,2.32,24647.41);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (4,'lincoln square',40494,2.56,15817.97);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (5,'north center',35114,2.05,17128.78);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (6,'lake view',103050,3.12,33028.85);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (7,'lincoln park',70492,3.16,22307.59);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (8,'near north side',105481,2.74,38496.72);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (9,'edison park',11525,1.13,10199.12);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (10,'norwood park',38303,4.37,8764.99);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (11,'jefferson park',26216,2.33,11251.5);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (12,'forest glen',19596,3.2,6123.75);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (13,'north park',17559,2.52,6967.86);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (14,'albany park',48396,1.92,25206.25);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (15,'portage park',63020,3.95,15954.43);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (16,'irving park',51940,3.21,16180.69);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (17,'dunning',43147,3.72,11598.66);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (18,'montclare',14401,0.99,14546.46);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (19,'belmont cragin',78116,3.91,19978.52);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (20,'hermosa',24062,1.17,20565.81);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (21,'avondale',36257,1.98,18311.62);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (22,'logan square',71665,3.59,19962.4);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (23,'humboldt park',54165,3.6,15045.83);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (24,'west town',87781,4.58,19166.16);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (25,'austin',96557,7.15,13504.48);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (26,'west garfield park',17433,1.28,13619.53);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (27,'east garfield park',19992,1.93,10358.55);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (28,'near west side',67881,5.69,11929.88);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (29,'north lawndale',34794,3.21,10839.25);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (30,'south lawndale',71399,4.59,15555.34);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (31,'lower west side',33751,2.93,11519.11);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (32,'loop',42298,1.65,25635.15);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (33,'near south side',28795,1.78,16176.97);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (34,'armour square',13890,1,13890);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (35,'douglas',20291,1.65,12297.58);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (36,'oakland',6799,0.58,11722.41);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (37,'fuller park',2567,0.71,3615.49);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (38,'grand boulevard',24589,1.74,14131.61);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (39,'kenwood',19116,1.04,18380.77);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (40,'washington park',12707,1.52,8359.87);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (41,'hyde park',29456,1.61,18295.65);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (42,'woodlawn',24425,2.07,11799.52);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (43,'south shore',53971,2.93,18420.14);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (44,'chatham',31710,2.95,10749.15);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (45,'avalon park',9458,1.25,7566.4);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (46,'south chicago',27300,3.34,8173.65);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (47,'burnside',2527,0.61,4142.62);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (48,'calumet heights',13088,1.75,7478.86);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (49,'roseland',38816,4.82,8053.11);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (50,'pullman',6820,2.12,3216.98);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (51,'south deering',14105,10.9,1294.04);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (52,'east side',21724,2.98,7289.93);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (53,'west pullman',26104,3.56,7332.58);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (54,'riverdale',7262,3.53,2057.22);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (55,'hegewisch',10027,5.24,1913.55);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (56,'garfield ridge',35439,4.23,8378.01);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (57,'archer heights',14196,2.01,7062.69);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (58,'brighton park',45053,2.72,16563.6);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (59,'mckinley park',15923,1.41,11292.91);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (60,'bridgeport',33702,2.09,16125.36);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (61,'new city',43628,4.83,9032.71);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (62,'west elsdon',18394,1.17,15721.37);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (63,'gage park',39540,2.2,17972.73);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (64,'clearing',24473,2.55,9597.25);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (65,'west lawn',33662,2.95,11410.85);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (66,'chicago lawn',55931,3.53,15844.48);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (67,'west englewood',29647,3.15,9411.75);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (68,'englewood',24369,3.07,7937.79);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (69,'greater grand crossing',31471,3.55,8865.07);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (70,'ashburn',41098,4.86,8456.38);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (71,'auburn gresham',44878,3.77,11903.98);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (72,'beverly',20027,3.18,6297.8);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (73,'washington heights',25065,2.86,8763.99);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (74,'mount greenwood',18628,2.71,6873.8);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (75,'morgan park',21186,3.3,6420);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (76,'o''hare',13418,13.34,1005.85);
+INSERT INTO crime_data.chicago_areas(community_area_id,name,population,area_sq_mi,density) VALUES (77,'edgewater',56296,1.74,32354.02);
