@@ -17,8 +17,7 @@
 8. How many crimes were classified as domestic incidents in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 
 9. What is the total population of all community areas where crimes were reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
-    
-10.What is the average population density of community areas where crimes were reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
+10. What is the average population density of community areas where crimes were reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 
 11. How many crimes were reported in each community area in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 
