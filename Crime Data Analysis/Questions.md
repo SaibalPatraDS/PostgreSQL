@@ -8,7 +8,7 @@
 6. What is the most common type of crime reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 7. How many crimes resulted in an arrest in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 8. How many crimes were classified as domestic incidents in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
-9. What is the total population of all community areas where crimes were reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
+9. What is the total population of all community areas where crimes were reported in Chicago in 2021?
 10.What is the average population density of community areas where crimes were reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 11. How many crimes were reported in each community area in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 12. Which community area had the highest number of crimes reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
@@ -29,4 +29,4 @@
 27. What is the correlation between temperature high and the number of crimes reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 28. What is the correlation between precipitation and the number of crimes reported in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
 29. Which community areas have a population density above the average and also reported a higher number of crimes in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
-30. Is there a correlation between population density and the percentage of crimes resulting in an arrest in Chicago in 2021?
+30. Is there a correlation between population density and the percentage of crimes resulting in an arrest in Chicago in 2021? [Solution](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/Crime%20Data%20Analysis/SQL%20Files/analysis_crime_data.sql)
