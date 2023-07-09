@@ -273,60 +273,220 @@ ORDER BY crimes_per_sq_area DESC;
 
 
 
---
+--23. What is the percentage of crimes that resulted in an arrest in each community area in Chicago in 2021?
+
+SELECT cc.community_id, 
+       100 * ROUND(COUNT(*)/COUNT(ca.community_area_id)::NUMERIC, 2) AS arrest_rate_per_crime
+FROM crime_data.chicago_crimes_2021 cc
+JOIN crime_data.chicago_areas ca
+ON cc.community_id = ca.community_area_id
+GROUP BY cc.community_id;
+
+
+
+
+--24. What is the percentage of crimes that were domestic incidents in each community area in Chicago in 2021?
+
+-- SELECT cc.community_id,
+--        ROUND(100 * COUNT(cc.*)/COUNT(ca.community_area_id)::NUMERIC, 2) ||' %' AS domestic_crime_rate
+-- FROM crime_data.chicago_crimes_2021 cc
+-- JOIN crime_data.chicago_areas ca
+-- ON cc.community_id = ca.community_area_id
+-- WHERE cc.domestic = 'TRUE'
+-- GROUP BY cc.community_id;
+
+-- WITH dom_crimes AS (
+-- 	SELECT community_id,
+-- 		   domestic,
+-- 		   COUNT(*) AS indv_total,
+-- 		   ROW_NUMBER() OVER(PARTITION BY community_id ORDER BY domestic DESC) AS rn
+-- 	FROM crime_data.chicago_crimes_2021
+-- 	GROUP BY community_id, domestic)
+	
+-- SELECT community_id,
+--        indv_total,
+-- 	   SUM(indv_total) 
+-- FROM dom_crimes
+-- WHERE rn = 1
+-- GROUP BY community_id, indv_total;
+
+
+SELECT community_id,
+       ROUND(100 * SUM(CASE WHEN domestic = 'TRUE' THEN 1 ELSE 0 END)/COUNT(*)::NUMERIC, 2)||' %' AS domestic_crime_rate
+FROM crime_data.chicago_crimes_2021 cc
+GROUP BY community_id
+ORDER BY community_id;
+
+
+
+
+--25. How many crimes were reported in each day of the week in Chicago in 2021?
+
+SELECT TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') AS days,
+	   COUNT(*) AS total_crimes
+FROM crime_data.chicago_crimes_2021
+GROUP BY TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day');
+-- ORDER BY CASE 
+--              WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Monday' THEN 1
+-- 			 WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Tuesday' THEN 2
+-- 			 WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Wednesday' THEN 3
+-- 			 WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Thursday' THEN 4
+-- 			 WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Friday' THEN 5
+-- 			 WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Saturday' THEN 6
+-- 			 WHEN TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'Day') = 'Sunday' THEN 7
+-- 		END;
+
+/*
+The TO_DATE function is used to convert the crime_date column from VARCHAR to DATE format.
+The TO_CHAR function is used to extract the day of the week from the crime_date as a textual representation (e.g., Monday, Tuesday, etc.).
+The result is grouped by the day of the week and the count of crimes is calculated using COUNT(*).
+The output is ordered based on the minimum crime_date to maintain the chronological order of the days of the week.
+*/
+
+
+
+-- 26. How many crimes were reported in each hour of the day in Chicago in 2021?
+
+
+-- SELECT
+--   TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'HH24') AS hour,
+--   COUNT(*) AS crime_count
+-- FROM
+--   crime_data.chicago_crimes_2021
+-- GROUP BY
+--   TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'HH24')
+-- ORDER BY
+--   hour;
+
+
+-- SELECT
+--   LPAD(hours.hour, 2, '0') AS hour,
+--   COUNT(cc.crime_date) AS crime_count
+-- FROM
+--   (SELECT DISTINCT LPAD(TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'HH24'), 2, '0') AS hour
+--    FROM crime_data.chicago_crimes_2021
+--    WHERE TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI') >= TO_DATE('01/01/2021', 'MM/DD/YYYY')
+--          AND TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI') < TO_DATE('01/01/2022', 'MM/DD/YYYY')
+--   ) hours
+-- LEFT JOIN crime_data.chicago_crimes_2021 cc
+-- ON LPAD(TO_CHAR(TO_DATE(cc.crime_date, 'MM/DD/YYYY HH24:MI'), 'HH24'), 2, '0') = hours.hour
+-- GROUP BY hours.hour
+-- ORDER BY hours.hour;
+
+
+-- 27. What is the correlation between temperature high and the number of crimes reported in Chicago in 2021?
+
+WITH temp AS(
+-- 	SELECT TO_CHAR(SUBSTRING(crime_date FROM 1 FOR POSITION(' ' IN crime_date)-1)::DATE, 'YYYY-MM-DD') AS date
+	SELECT 
+	       TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'YYYY-MM-DD') AS crime_dates,
+	       COUNT(*) as total_crimes
+	FROM crime_data.chicago_crimes_2021
+	GROUP BY TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'YYYY-MM-DD')
+)
+
+--    total AS (
+-- 	   SELECT COUNT(*) as total_crimes
+-- 	   FROM crime_data.chicago_crimes_2021
+-- 	   GROUP BY crime_date
+--    )
+ 
+-- SELECT crime_date, crime_dates FROM temp;
+
+SELECT CORR(ct.temp_high::NUMERIC, temp.total_crimes::NUMERIC) AS corr_btw_temp_high_n_crimes
+FROM temp
+JOIN crime_data.chicago_temps_2021 ct
+ON temp.crime_dates::DATE = ct.date
+WHERE ct.temp_high IS NOT NULL;
+
+
+
+--28. What is the correlation between precipitation and the number of crimes reported in Chicago in 2021?
+
+WITH temp AS (
+	SELECT TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'YYYY-MM-DD') AS crime_dates,
+	       COUNT(*) AS total_crimes
+	FROM crime_data.chicago_crimes_2021
+	GROUP BY TO_CHAR(TO_DATE(crime_date, 'MM/DD/YYYY HH24:MI'), 'YYYY-MM-DD')
+)
+
+SELECT CORR(ct.precipitation, temp.total_crimes) AS corr_btw_precp_n_crimes
+FROM temp
+JOIN crime_data.chicago_temps_2021 ct 
+ON temp.crime_dates::DATE = ct.date
+WHERE ct.precipitation IS NOT NULL;
+
+
+/*
+--29. Which community areas have a population density above the average and 
+      also reported a higher number of crimes in Chicago in 2021?
+*/
+
+SELECT Community_Name
+FROM(
+	SELECT cc.community_id AS Community_ID,
+		   ca.name AS Community_Name,
+		   COUNT(cc.*) AS total_crimes
+	FROM crime_data.chicago_crimes_2021 cc
+	JOIN crime_data.chicago_areas ca
+	ON cc.community_id = ca.community_area_id
+	WHERE ca.density > (SELECT AVG(density)
+					   FROM crime_data.chicago_areas)
+	GROUP BY cc.community_id, ca.name
+	ORDER BY total_crimes DESC) x;
+	
+/*Alternative */
+
+SELECT Community_Name
+FROM(
+	SELECT cc.community_id AS Community_ID, 
+		   ca.name AS Community_Name,
+		   COUNT(cc.*) AS total_crimes,
+		   ca.density AS Density,
+		   AVG(ca.density) OVER() AS avg_density
+	FROM crime_data.chicago_crimes_2021 cc
+	JOIN crime_data.chicago_areas ca
+	ON cc.community_id = ca.community_area_id
+	GROUP BY cc.community_id, ca.name, ca.density) x
+WHERE x.Density > x.avg_density
+ORDER BY x.total_crimes DESC;
 
 
 
 
 
+--30. Is there a correlation between population density and the percentage of crimes resulting in an arrest in Chicago in 2021?
 
+/*
+hint - 1. calculate percentage of crimes resulting into arrest
+       2. calculate correlation, where joining columns by community_id 
+	   3. group by community_id
+*/
 
+SELECT CORR(Density, arrests_percentage) AS corr_btw_density_arrests
+FROM(
+	SELECT cc.community_id AS Community_ID,
+		   ca.density AS Density,
+		   ROUND(100 * SUM(CASE WHEN cc.arrest = 'TRUE' THEN 1 END) /COUNT(*)::NUMERIC, 2) AS arrests_percentage
+	FROM crime_data.chicago_crimes_2021 cc
+	JOIN crime_data.chicago_areas ca
+	ON cc.community_id = ca.community_area_id
+	GROUP BY cc.community_id, ca.density) x;
+	
+	
+-- SELECT CORR(Density, Arrests_Percentage) AS corr_btw_density_arrests
+-- FROM (
+--     SELECT cc.community_id,
+-- 	       ca.density AS Density,
+--            ROUND(100 * SUM(CASE WHEN cc.arrest = 'TRUE' THEN 1 END) / COUNT(*)::NUMERIC, 2) AS Arrests_Percentage
+--     FROM crime_data.chicago_crimes_2021 cc
+--     JOIN crime_data.chicago_areas ca ON cc.community_id = ca.community_area_id
+--     GROUP BY ca.density, cc.community_id
+-- 	ORDER BY cc.community_id DESC
+-- ) x;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- SELECT arrest
+-- FROM crime_data.chicago_crimes_2021;
 
 
 
