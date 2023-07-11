@@ -12,3 +12,4 @@ SELECT 1, random() FROM generate_series(1, 10000000);
 
 INSERT INTO emp_table 
 SELECT 2, random() FROM generate_series(1, 10000000);
+
