@@ -103,8 +103,10 @@ WITH RECURSIVE emp_hierarchy AS(
 	ON H.manager_id = E.id
 )
 
-SELECT  FROM emp_hierarchy
-ORDER BY lvl DESC;
+SELECT H2.manager_id AS manager_ID, H2.name AS emp_name, E2.name AS manager_name, lvl
+FROM emp_hierarchy H2
+JOIN emp_details E2
+ON H2.manager_id = E2.id;
 
 
 
