@@ -195,7 +195,7 @@ To utilize the data mart solution, follow the steps provided in the SQL script. 
 
 Remember that this README provides an overview, and the SQL script itself contains the detailed implementation of the data cleansing process. Feel free to modify and extend the script according to your data and business needs.
 
-For questions or assistance, please contact (Saibal Patra)[https://www.linkedin.com/in/saibal-patra/].
+For questions or assistance, please contact [Saibal Patra](https://www.linkedin.com/in/saibal-patra/).
 
 ## License
 
