@@ -1,4 +1,5 @@
-# Data Mart Solution README
+# `Data Mart` README file
+------------------------------------------------------------
 
 This README provides an overview of the data mart solution for managing and cleaning weekly sales data. The solution involves creating a schema, defining tables, and performing data cleansing steps to enhance the quality and usability of the provided data.
 
