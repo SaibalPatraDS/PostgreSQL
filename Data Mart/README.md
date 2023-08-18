@@ -199,4 +199,4 @@ For questions or assistance, please contact [your contact information].
 
 ## License
 
-This data mart solution is provided under [license name/version]. See [LICENSE](LICENSE) for more details.
+This data mart solution is provided under [license name/version]. See [LICENSE]([(https://github.com/SaibalPatraDS/PostgreSQL/blob/main/LICENSE)]) for more details.
