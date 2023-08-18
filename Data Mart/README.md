@@ -199,4 +199,4 @@ For questions or assistance, please contact [Saibal Patra](https://www.linkedin.
 
 ## License
 
-This data mart solution is provided under (GNU General Public License v3.0)[]. See (LICENSE)[https://github.com/SaibalPatraDS/PostgreSQL/blob/main/LICENSE] for more details.
+This data mart solution is provided under [GNU General Public License v3.0](). See [LICENSE](https://github.com/SaibalPatraDS/PostgreSQL/blob/main/LICENSE) for more details.
