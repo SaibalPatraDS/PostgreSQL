@@ -40,4 +40,5 @@ The following questions can be considered key business questions and metrics tha
 
 Each question can be answered using a single query - but as you are writing the SQL to solve each individual problem, keep in mind how you would generate all of these metrics in a single SQL script which the Balanced Tree team can run each month.
 
+[Case Study Analysis](https://github.com/SaibalPatraDS/PostgreSQL/blob/91c8fc4670b998dc0522ba49e082b18ac6d28331/Case%20Study%20%237%20-%20Balanced%20Tree%20Clothing%20Co./Case%20Study.md)
 
