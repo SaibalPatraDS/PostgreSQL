@@ -22,14 +22,14 @@ For this case study there is a total of 4 datasets for this case study - however
 ## Product Hierarcy & Product Price
 Thes tables are used only for the bonus question where we will use them to recreate the `balanced_tree.product_details` table.
 
-`balanced_tree.product_hierarchy`
+**balanced_tree.product_hierarchy**
 
 
 ![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/aa17a25b-436f-49a5-a85d-fed31246bcfe)
 
 
 
-`balanced_tree.product_prices`
+**balanced_tree.product_prices**
 
 
 ![image](https://github.com/SaibalPatraDS/PostgreSQL/assets/102281722/ba381d9d-a8ce-4b60-abe0-548ceb1a7502)
