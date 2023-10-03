@@ -479,10 +479,11 @@ keep in mind how you would generate all of these metrics in a single SQL script 
 3.10 What is the most common combination of at least 1 quantity of any 3 products in a 1 single transaction?
 
 --- 
-Hint - 1. Select transaction_id and product_name combination
-       2. Create combination of products on the available list of products
-       3. Count total combinations for each combination
-       4. Filter only the top result
+
+* Hint - *1. Select transaction_id and product_name combination*
+         *2. Create combination of products on the available list of products*
+         *3. Count total combinations for each combination*
+         *4. Filter only the top result*
 ---
 **Query #21**
 
