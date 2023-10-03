@@ -486,40 +486,46 @@ Hint - 1. Select transaction_id and product_name combination
 	   4. Filter only the top result
 */
 
-WITH product_purchased AS (
-	SELECT s.txn_id,
-		   p.product_name
-	FROM balanced_tree.sales s
-	JOIN balanced_tree.product_details p 
-	ON s.prod_id = p.product_id),
+---
+**Query #21**
 
-product_combination AS (
-	SELECT DISTINCT txn_id,
-		   p1.product_name AS product1,
-		   p2.product_name AS product2,
-		   p3.product_name AS product3
-	FROM product_purchased p1
-	JOIN product_purchased p2
-	USING (txn_id)
-	JOIN product_purchased p3
-	USING (txn_id)
-	WHERE p1.product_name < p2.product_name
-	  AND p2.product_name  < p3.product_name),
+    WITH product_purchased AS (
+    	SELECT s.txn_id,
+    		   p.product_name
+    	FROM balanced_tree.sales s
+    	JOIN balanced_tree.product_details p 
+    	ON s.prod_id = p.product_id),
+    
+    product_combination AS (
+    	SELECT DISTINCT txn_id,
+    		   p1.product_name AS product1,
+    		   p2.product_name AS product2,
+    		   p3.product_name AS product3
+    	FROM product_purchased p1
+    	JOIN product_purchased p2
+    	USING (txn_id)
+    	JOIN product_purchased p3
+    	USING (txn_id)
+    	WHERE p1.product_name < p2.product_name
+    	  AND p2.product_name  < p3.product_name),
+    
+    combination_counts AS (
+    	SELECT product1,
+    		   product2,
+    		   product3,
+    		   COUNT(*) AS combination
+    	FROM product_combination
+    	GROUP BY product1, product2, product3
+    	ORDER BY combination DESC)
+    
+    SELECT product1, product2, product3, combination
+    FROM combination_counts
+    LIMIT 1;
 
-combination_counts AS (
-	SELECT product1,
-		   product2,
-		   product3,
-		   COUNT(*) AS combination
-	FROM product_combination
-	GROUP BY product1, product2, product3
-	ORDER BY combination DESC)
-
-SELECT product1, product2, product3, combination
-FROM combination_counts
-LIMIT 1;
+| product1                     | product2                    | product3               | combination |
+| ---------------------------- | --------------------------- | ---------------------- | ----------- |
+| Grey Fashion Jacket - Womens | Teal Button Up Shirt - Mens | White Tee Shirt - Mens | 352         |
 
 ---
-
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/dkhULDEjGib3K58MvDjYJr/61)
